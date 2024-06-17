@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Fila de Espera</title>
+</head>
+<body class="principal">
+    <header>
+        <div class="container__titulo">
+            <img src="img/espera-contorno-preto.png" alt="figura de espera">
+            <h1>FILA DE ESPERA</h1>
+        </div>
+    </header>
+    <aside>
+        <div class="container__preencher">
+            <p>Nome Completo:</p>
+            <input type="text" size="40" maxlength="40" class="preencher__nome" id="nome">
+            <p>Idade:</p>
+            <input type="number" min="1" max="100" class="preencher__idade" id="idade">
+        </div>
+        <div class="container__preencher">
+            <button onclick="cadastrarPessoa()" class="container__botao">Cadastrar</button>
+        </div>
+    </aside>
+    <aside class="container__fila">
+        <div>
+            <p class="container__fila_sublinhado">Aguardando Fila Normal</p>
+            <ol id="lista">                
+            </ol>
+            <div class="container__fila_botao">
+                <button onclick="chamarFilaNormal()" class="container__botao">Chamar Fila Normal</button>
+                <button onclick="excluirDadosNormal()" class="container__botao">Excluir Fila Normal</button>
+            </div>
+        </div>
+        <div>
+            <p class="container__fila_sublinhado">Aguardando Fila Preferencial</p>
+            <ol id="listaPreferencial">
+            </ol>
+            <div class="container__fila_botao">
+                <button onclick="chamarFilaPreferencial()" class="container__botao">Chamar Preferencial</button>
+                <button onclick="excluirDadosPreferencial()" class="container__botao">Excluir Fila Preferencial</button>
+            </div>
+        </div>
+        <div>
+            <p class="container__fila_sublinhado">Chamados para atendimento</p>
+            <ol id="chamar">
+            </ol>
+            <div class="container__fila_botao">
+                <button onclick="retonarFila()" class="container__botao">Voltar para Fila</button>
+                <button onclick="limparChamada()" class="container__botao">Limpar Lista de chamada</button>
+            </div>
+        </div>
+    </aside>
+    <script src="app.js" defer></script>
+</body>
+</html>

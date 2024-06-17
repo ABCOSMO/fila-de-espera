@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+:root {
+    --fonte-principal: 'Varela Round', sans-serif;
+    --cor-preta: black;
+    --cor-branca: white;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.principal {
+    background-image: url("img/fundo-tela.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container__titulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 6px solid var(--cor-preta);
+    margin: 2% 40%;
+    padding: 1% 0;
+    border-radius: 2em;
+}
+
+h1 {
+    font-family: var(--fonte-principal);
+    font-weight: 800;
+    font-size: 20px;
+}
+
+img {
+    width: 3em;
+}
+
+.container__preencher {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+}
+
+p {
+    font-family: var(--fonte-principal);
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0 0.5em;
+}
+
+.preencher__nome {
+    width: 20em;
+    height: 1.5em;
+    margin-bottom: 1em;
+    border-radius: 5px;
+    font-family: var(--fonte-principal);
+}
+
+.preencher__idade {
+    height: 1.5em;
+    margin-bottom: 1em;
+    border-radius: 5px;
+    font-family: var(--fonte-principal);
+}
+
+button {
+    padding: 1em 1em;
+    font-family: var(--fonte-principal);
+    font-size: 12px;
+    font-weight: 500;
+    margin-right: 0.5em;
+    border-radius: 5px;    
+}
+
+.container__botao {
+    background-color: var(--cor-branca);
+    border: 1px solid var(--cor-preta);  
+    color: var(--cor-preta);     
+}
+
+.container__botao:hover {
+    background-color: var(--cor-preta);
+    border: 1px solid var(--cor-branca);       
+    color: var(--cor-branca);
+}
+
+.container__fila {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    margin: 2em 5em;
+}
+
+.container__fila_sublinhado {
+    border-bottom: 2px solid var(--cor-preta);
+    text-align: center;
+}
+
+.container__fila_botao {
+    display: flex;
+    justify-content: center;
+}
+
+ol {
+    margin-left: 1.5em;
+}
+
+@media (max-width: 480px) {
+    .container__titulo {
+        border: 3px solid var(--cor-preta);
+        text-align: center;
+    }
+    h1 {
+        font-family: var(--fonte-principal);
+        font-weight: 800;
+        font-size: 10px;
+    }
+    
+    img {
+        width: 2em;
+       
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .container__preencher {
+        height: 10vh;
+        display: grid;
+        grid-template-columns: 60%;
+        margin: 2em 1em;
+        padding-right: 8em;
+    }
+
+    .container__fila {
+        height: 50vh;
+        display: grid;
+        grid-template-columns: 100%;
+        margin: 2em 5em;
+    }
+}
