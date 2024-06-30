@@ -10,7 +10,7 @@
     <header>
         <div class="container__titulo">
             <img src="img/espera-contorno-preto.png" alt="figura de espera">
-            <h1>FILA DE ESPERA</h1>
+            <h1>FILA DE ESPERA 2</h1>
         </div>
     </header>
     <aside>
@@ -19,6 +19,15 @@
             <input type="text" size="40" maxlength="40" class="preencher__nome" id="nome">
             <p>Idade:</p>
             <input type="number" min="1" max="100" class="preencher__idade" id="idade">
+            <p>Preferencial?</p>
+            <input type="radio" id="sim" name="sim" value="sim">
+            <label for="sim">Sim</label>
+            <input type="radio" id="não" name="não" value="não">
+            <label for="não">Não</label>
+        </div>
+        <div class="container__preencher">
+            <p>Motivo Atendimento Preferencial:</p>
+            <input type="text" size="60" maxlength="60" class="preencher__motivo" id="motivo">
         </div>
         <div class="container__preencher">
             <button onclick="cadastrarPessoa()" class="container__botao">Cadastrar</button>
@@ -44,7 +53,7 @@
             </div>
         </div>
         <div>
-            <p class="container__fila_sublinhado">Atendimento</p>
+            <p class="container__fila_sublinhado">Chamados para atendimento</p>
             <ol id="chamar">
             </ol>
             <div class="container__fila_botao">
@@ -52,16 +61,6 @@
                 <button onclick="limparChamada()" class="container__botao">Limpar Lista de chamada</button>
             </div>
         </div>
-        <div>
-            <p class="container__fila_sublinhado">Atendimento preferencial</p>
-            <ol id="chamar">
-            </ol>
-            <div class="container__fila_botao">
-                <button onclick="retonarFila()" class="container__botao">Voltar para Fila</button>
-                <button onclick="limparChamada()" class="container__botao">Limpar Lista de chamada</button>
-            </div>
-        </div>
-    </aside>
-    <script src="app.js" defer></script>
+    </aside>       
 </body>
 </html>

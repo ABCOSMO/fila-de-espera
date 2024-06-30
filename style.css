@@ -50,16 +50,31 @@ p {
     margin: 0 0.5em;
 }
 
+label {
+    font-family: var(--fonte-principal);
+    font-size: 18px;
+    font-weight: 400;
+    margin-right: 0.5em;
+}
+
 .preencher__nome {
     width: 20em;
-    height: 1.5em;
+    height: 2em;
+    margin-bottom: 1em;
+    border-radius: 5px;
+    font-family: var(--fonte-principal);
+}
+
+.preencher__motivo {
+    width: 36.5em;
+    height: 2em;
     margin-bottom: 1em;
     border-radius: 5px;
     font-family: var(--fonte-principal);
 }
 
 .preencher__idade {
-    height: 1.5em;
+    height: 2em;
     margin-bottom: 1em;
     border-radius: 5px;
     font-family: var(--fonte-principal);
@@ -89,7 +104,7 @@ button {
 .container__fila {
     height: 100vh;
     display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-columns: 33% 33% 33%;
     margin: 2em 5em;
 }
 
