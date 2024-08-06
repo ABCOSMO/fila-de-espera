@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.responsivevoice.org/responsivevoice.js"></script>
     <link rel="stylesheet" href="style.css">
     <title>Fila de Espera</title>
 </head>
@@ -20,9 +21,9 @@
             <p>Idade:</p>
             <input type="number" min="1" max="100" class="preencher__idade" id="idade">
             <p>Preferencial?</p>
-            <input type="radio" id="sim" name="preferencial" value="sim">
+            <input class="container__radio" type="radio" id="sim" name="preferencial" value="sim">
             <label for="sim">Sim</label>
-            <input type="radio" id="nao" name="preferencial" value="nao">
+            <input class="container__radio" type="radio" id="nao" name="preferencial" value="nao">
             <label for="nao">Não</label>
         </div>
         <div class="container__preencher">
@@ -31,6 +32,9 @@
         </div>
         <div class="container__preencher">
             <button onclick="cadastrarPessoa()" class="container__botao">Cadastrar</button>
+        </div>
+        <div class="container__espera">
+            <h3></h3>
         </div>
     </aside>
     <aside class="container__fila">

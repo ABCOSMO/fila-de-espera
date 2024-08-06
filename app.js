@@ -151,6 +151,7 @@ function chamarFilaNormal() {
     let excluirMotivo = listaMotivoNormal.shift();
     gerarLista();
     gerarListaDeChamada();
+    exibirMensagemInicial();
 }
 
 function chamarFilaPreferencial() {
@@ -168,6 +169,7 @@ function chamarFilaPreferencial() {
     let excluirMotivo = listaMotivoPreferencial.shift();
     gerarListaPreferencial();
     gerarListaDeChamada();
+    exibirMensagemInicial();
 }
 
 function retonarFila() {
@@ -211,3 +213,17 @@ function limparChamada() {
     listaDeNomeChamados = [];
     gerarListaDeChamada();
 }
+
+function exibirTextoNaTela(tag, texto) {
+    let campo = document.querySelector(tag);
+    campo.innerHTML = texto;
+    responsiveVoice.speak(texto, 'Brazilian Portuguese Female', {rate:1});
+}
+
+function exibirMensagemInicial() {
+    let ultimoNumeroNome = listaDeNomeChamados.length - 1;
+    let chamarNaFila = listaDeNomeChamados[ultimoNumeroNome];
+    let fala = ' comparecer a sala de atendimento';
+    exibirTextoNaTela('h3', `${chamarNaFila}${fala}`);
+}
+

@@ -41,6 +41,19 @@ img {
     display: flex;
     align-items: baseline;
     justify-content: center;
+ }
+
+.container__espera {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    padding-top: 2em;
+}
+
+h3 {
+    font-family: var(--fonte-principal);
+    font-weight: 400;
+    font-size: 18px;
 }
 
 p {
@@ -122,11 +135,12 @@ ol {
     margin-left: 1.5em;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 640px) {
     .container__titulo {
         border: 3px solid var(--cor-preta);
         text-align: center;
     }
+
     h1 {
         font-family: var(--fonte-principal);
         font-weight: 800;
@@ -142,8 +156,17 @@ ol {
         font-size: 14px;
     }
 
+    label {
+        font-size: 14px;
+    }
+
+    .container__radio {
+        margin: 0;
+
+    }
+
     .container__preencher {
-        height: 10vh;
+        height: 25vh;
         display: grid;
         grid-template-columns: 60%;
         margin: 2em 1em;
